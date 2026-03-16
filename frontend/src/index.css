@@ -1,0 +1,46 @@
+:root {
+  --font-ui: "PingFang SC", "Microsoft YaHei", "Segoe UI", sans-serif;
+  --bg-page: #f4f8ff;
+  --bg-surface: #ffffff;
+  --bg-soft: #f0f5ff;
+  --line-soft: #dbe7ff;
+  --line-mid: #c7d8fb;
+  --text-main: #13315c;
+  --text-secondary: #4f6b91;
+  --text-muted: #7f95b8;
+  --blue-500: #2f6fed;
+  --blue-600: #245bcd;
+  --blue-700: #1b469b;
+  --success: #10b981;
+  --danger: #e74c3c;
+  --radius-lg: 18px;
+  --radius-md: 12px;
+  --shadow-soft: 0 12px 36px rgba(36, 91, 205, 0.08);
+  --shadow-card: 0 6px 20px rgba(31, 78, 164, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  font-family: var(--font-ui);
+  color: var(--text-main);
+  background:
+    radial-gradient(circle at 15% 0%, rgba(84, 142, 255, 0.2), transparent 42%),
+    radial-gradient(circle at 85% 10%, rgba(185, 216, 255, 0.35), transparent 45%),
+    var(--bg-page);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: "Consolas", "Courier New", monospace;
+}

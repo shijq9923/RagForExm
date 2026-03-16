@@ -1,0 +1,250 @@
+.knowledge-base-manager {
+  max-width: 920px;
+  margin: 0 auto;
+}
+
+.upload-section,
+.documents-section {
+  padding: 24px;
+  background: var(--bg-surface);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--line-soft);
+  box-shadow: var(--shadow-card);
+}
+
+.upload-section {
+  margin-bottom: 24px;
+}
+
+.upload-section h3,
+.documents-section h3,
+.manager-header h2 {
+  color: var(--blue-700);
+}
+
+.manager-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.refresh-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(135deg, var(--blue-500) 0%, var(--blue-600) 100%);
+  color: #fff;
+  cursor: pointer;
+}
+
+.refresh-button:disabled {
+  background: #b7c7e6;
+  cursor: not-allowed;
+}
+
+.upload-container {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.drop-zone {
+  border: 2px dashed #b9cef8;
+  border-radius: 14px;
+  padding: 30px 20px;
+  text-align: center;
+  background: #f8fbff;
+  cursor: pointer;
+}
+
+.drop-zone.drag-over {
+  border-color: var(--blue-500);
+  background: #eef4ff;
+}
+
+.file-icon {
+  font-size: 50px;
+  color: var(--blue-500);
+  opacity: 0.82;
+}
+
+.drop-zone-text,
+.file-size,
+.document-meta,
+.document-preview,
+.empty-state {
+  color: var(--text-secondary);
+}
+
+.file-link {
+  color: var(--blue-600);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.file-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  border: 1px solid var(--line-soft);
+  background: #fbfdff;
+  border-radius: 10px;
+}
+
+.file-icon.selected {
+  color: var(--success);
+}
+
+.upload-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 11px 18px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(135deg, var(--blue-500) 0%, var(--blue-600) 100%);
+  color: #fff;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.upload-button:disabled {
+  background: #b7c7e6;
+  cursor: not-allowed;
+}
+
+.spinner {
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba(255, 255, 255, 0.35);
+  border-top: 2px solid #fff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+.status-message,
+.error-message {
+  padding: 12px 14px;
+  border-radius: 10px;
+  font-size: 14px;
+}
+
+.status-message.success {
+  background: #effcf5;
+  color: #0f8a60;
+  border: 1px solid #c9f1df;
+}
+
+.status-message.error,
+.error-message {
+  background: #fff3f2;
+  color: #cc3f31;
+  border: 1px solid #ffd3ce;
+}
+
+.documents-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.document-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 16px;
+  border-radius: 12px;
+  border: 1px solid var(--line-soft);
+  background: #fff;
+}
+
+.document-item:hover {
+  box-shadow: var(--shadow-card);
+}
+
+.document-info {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  flex: 1;
+}
+
+.document-icon {
+  font-size: 20px;
+  color: var(--blue-500);
+}
+
+.document-source {
+  margin: 0 0 6px;
+  color: var(--text-main);
+}
+
+.delete-button {
+  padding: 9px 12px;
+  border: none;
+  border-radius: 10px;
+  background: var(--danger);
+  color: #fff;
+  cursor: pointer;
+}
+
+.delete-button:hover {
+  background: #d63e30;
+}
+
+.upload-results {
+  margin-top: 8px;
+  padding: 12px;
+  background: #f8fbff;
+  border: 1px solid var(--line-soft);
+  border-radius: 10px;
+}
+
+.upload-result-item {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 8px 10px;
+  margin-bottom: 6px;
+  border-radius: 8px;
+  font-size: 13px;
+}
+
+.upload-result-item.success {
+  background: #effcf5;
+  color: #0f8a60;
+}
+
+.upload-result-item.error {
+  background: #fff3f2;
+  color: #cc3f31;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@media (max-width: 768px) {
+  .manager-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .document-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .delete-button {
+    align-self: flex-end;
+  }
+}
