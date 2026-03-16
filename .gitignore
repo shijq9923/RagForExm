@@ -7,6 +7,7 @@ __pycache__/
 *.pyd
 *.so
 .Python
+.python-version
 build/
 dist/
 develop-eggs/
@@ -41,6 +42,7 @@ backend/.venv/
 # Environment files
 .env
 .env.*
+!.env.example
 
 # Database / persistence
 *.db
@@ -59,6 +61,7 @@ logs/
 *.tmp
 *.temp
 md5.text
+.cache/
 
 # Node.js
 node_modules/
@@ -75,6 +78,12 @@ frontend/.pnp.js
 # Testing / coverage
 coverage/
 .nyc_output/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
 
 # System files
 .DS_Store
@@ -84,3 +93,7 @@ desktop.ini
 # Project artifacts (tracked intentionally)
 *.pdf
 *.docx
+
+# Optional local docs / notes
+*.pptx
+*.ppt
