@@ -1,12 +1,15 @@
 # Python
 __pycache__/
+**/__pycache__/
 *.py[cod]
 *$py.class
+*.pyo
+*.pyd
 *.so
 .Python
 build/
-develop-eggs/
 dist/
+develop-eggs/
 downloads/
 eggs/
 .eggs/
@@ -21,35 +24,38 @@ wheels/
 *.egg
 MANIFEST
 
-# 虚拟环境
+# Virtual environments
 venv/
 env/
 ENV/
-.venv
+.venv/
+backend/.venv/
 
-# IDE
+# IDE / editor
 .vscode/
 .idea/
 *.swp
 *.swo
 *~
 
-# 环境变量
+# Environment files
 .env
-.env.local
+.env.*
 
-# 数据库
+# Database / persistence
 *.db
 *.sqlite
 *.sqlite3
 chroma_db/
 chat_history/
+backend/chroma_db/
+backend/chat_history/
 
-# 日志
+# Logs / telemetry
 *.log
 logs/
 
-# 临时文件
+# Temporary files
 *.tmp
 *.temp
 md5.text
@@ -61,23 +67,20 @@ yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
 
-# React
+# Frontend build artifacts
 frontend/build/
 frontend/.pnp
 frontend/.pnp.js
 
-# 测试覆盖率
+# Testing / coverage
 coverage/
 .nyc_output/
 
-# 系统文件
+# System files
 .DS_Store
 Thumbs.db
 desktop.ini
 
-# 项目特定
-data/
+# Project artifacts (tracked intentionally)
 *.pdf
 *.docx
-!frontend/node_modules/
-
